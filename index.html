@@ -14,12 +14,14 @@
 </head>
 <body>
 
+<h1 style="font-weight: bold;">ようこそ、ハッカソン部へ</h1>
+
 <!-- A-Frameのコードここから -->
 <a-scene embedded arjs="debugUIEnabled: false;" renderer="gammaOutput: true;" vr-mode-ui="enabled:false" >
 
     <!-- オブジェクトの読み込みここから -->
     <a-assets>
-        <a-asset-item id="model" src="./Mesh_Chick.gltf"></a-asset-item>
+        <a-asset-item id="model" src="./model.gltf"></a-asset-item>
     </a-assets>
     <!-- オブジェクトの読み込みここまで -->
 
@@ -30,8 +32,8 @@
 
     <!-- マーカーの上に表示させるモデルの設定ここから -->
     <a-marker preset="custom" type="pattern" url="./pattern-logos.patt">
-        <a-entity gltf-model="#model" position="0 0 0" scale="0 0 0" rotation="0 0 0" animation-mixer>
-            <a-animation  attribute="rotation" to="0 360 0" dur="2000" repeat="indefinite" easing="linear"></a-animation>
+        <a-entity gltf-model="#model" position="0 0 0" scale="0.5 0.5 0.5" rotation="0 0 0" animation-mixer>
+            <a-animation  attribute="rotation" to="0 360 0" dur="7000" repeat="indefinite" easing="linear"></a-animation>
         </a-entity>
     </a-marker>
     <!-- マーカーの上に表示させるモデルの設定ここまで -->
